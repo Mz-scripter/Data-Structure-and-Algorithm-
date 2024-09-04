@@ -25,6 +25,10 @@ You are given an array `prices` where `prices[i]` is the price of a given stock 
 ### [Summary Ranges](https://leetcode.com/problems/summary-ranges/) LeetCode 228
 This problem was quite challenging, but I was able to solve it fairly easily. Even though the solution has two `while` loops, it surprisingly has a time complexity of `O(n)`.
 
+## Day 7
+### [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/)
+Write this later
+
 
 
 
