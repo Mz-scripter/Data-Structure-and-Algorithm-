@@ -27,7 +27,11 @@ This problem was quite challenging, but I was able to solve it fairly easily. Ev
 
 ## Day 7
 ### [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/)
-Write this later
+Took a crack at Leetcode 238 (Product of Array Except Self) for the first time. Coming up with a solution was a breeze—probably because I totally ignored the constraints. 😅 Both of my solutions are O(n^2), which isn't exactly ideal, but hey, they work!
+I found this code online that seemed like a good explanation, but I’m still not sure I fully understand it.
+Here are my first solutions, though they don't follow the constraints yet
+![Screenshot of my first solution](https://x.com/mzed_io/status/1831224406917480497/photo/1)
+![Screenshot of the second solution](https://x.com/mzed_io/status/1831224406917480497/photo/2)
 
 
 
