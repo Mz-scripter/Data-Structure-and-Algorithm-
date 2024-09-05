@@ -33,6 +33,10 @@ Here are my first solutions, though they don't follow the constraints yet
 ![Screenshot of my first solution](https://github.com/Mzed-io/Data-Structure-and-Algorithm-/blob/main/images/carbon%20(11).png)
 ![Screenshot of the second solution](https://github.com/Mzed-io/Data-Structure-and-Algorithm-/blob/main/images/carbon%20(12).png)
 
+## Day 8
+### [Merge Intervals](https://leetcode.com/problems/merge-intervals/description/)
+I tried Leetcode 56 (Merge Intervals), and my solution was accepted with a time complexity of O(NlogN). It ran in 140ms but only beat 5.53% of submissions, which was surprising. The code is pretty straightforward since I'm still learning 😅. Took a look at the top solutions and found some interesting approaches.
+
 
 
 
