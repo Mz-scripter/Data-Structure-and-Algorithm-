@@ -37,6 +37,10 @@ Here are my first solutions, though they don't follow the constraints yet
 ### [Merge Intervals](https://leetcode.com/problems/merge-intervals/description/)
 I tried Leetcode 56 (Merge Intervals), and my solution was accepted with a time complexity of O(NlogN). It ran in 140ms but only beat 5.53% of submissions, which was surprising. The code is pretty straightforward since I'm still learning 😅. Took a look at the top solutions and found some interesting approaches.
 
+## Day 9
+### [Merge Intervals](https://leetcode.com/problems/merge-intervals/description/)
+I refactored the code I used to solve this problem. The if condition checks whether the merged list is empty or if the end of the last interval in the merged list is less than the start of the current interval. If there’s no overlap, the current interval is appended to the merged list. Otherwise, the intervals are merged by updating the end of the last interval in the merged list to be the maximum of the current interval’s end and the last interval’s end.
+
 
 
 
