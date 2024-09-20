@@ -3,41 +3,36 @@ from typing import List
 
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
-        width = len(matrix[0])
-        height = len(matrix)
+        if not matrix:
+            return []
         answer = []
-        i = 0
-        j = -1
-        n = None
-        k = 1
+        top, bottom = 0, len(matrix) - 1
+        right, left = 0, len(matrix[0]) - 1
 
-        # Spiral
-        while len(answer) < width * height:
-            # Left to Right
-            for m in matrix[i]:
-                if len(answer) < width * height:
-                    answer.append(m)
+        while top <= bottom and left <= right:
+            # left to right
+            for j in range(left, right + 1):
+                answer.append(matrix[top][j])
+            top += 1
 
-            # Top to bottom
-            for m in matrix[k:]:
-                if len(answer) < width * height:
-                    answer.append(m[j])
+            # top to bottom
+            for i in range(top, bottom + 1):
+                answer.append(matrix[i][right])
+            right -= 1
 
-            # Right to Left
-            for m in matrix[j][::-1][k:]:
-                if len(answer) < width * height:
-                    answer.append(m)
+            # right to left
+            if top <= bottom:
+                for j in range(right, left - 1, -1):
+                    answer.append(matrix[bottom][j])
+                bottom -= 1
 
-            # Bottom to Top
-            for m in matrix[::-1][k:-k]:
-                if len(answer) < width * height:
-                    answer.append(m[i])
-            i += 1
-            j -= 1
-            k += 1
-        return answer
+            # bottom to top
+            for i in range(bottom, top - 1, -1):
+                answer.append(matrix[i][left])
+            left += 1
         # End of Spiral
+        return answer
 
 
 result = Solution()
-print(result.spiralOrder([[23, 18, 20, 26, 25], [24, 22, 3, 4, 4], [15, 22, 2, 24, 29], [18, 15, 23, 28, 28]]))
+print(result.spiralOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
