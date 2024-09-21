@@ -6,33 +6,34 @@ class Solution:
         if not matrix:
             return []
         answer = []
+        total_num = len(matrix) * len(matrix[0])
         top, bottom = 0, len(matrix) - 1
-        right, left = 0, len(matrix[0]) - 1
+        left, right = 0, len(matrix[0]) - 1
 
-        while top <= bottom and left <= right:
+        # Start of spiral
+        while len(answer) < total_num:
+
             # left to right
-            for j in range(left, right + 1):
-                answer.append(matrix[top][j])
+            for n in range(left, right + 1):
+                answer.append(matrix[top][n])
             top += 1
 
             # top to bottom
-            for i in range(top, bottom + 1):
-                answer.append(matrix[i][right])
+            for n in range(top, bottom + 1):
+                answer.append(matrix[n][right])
             right -= 1
 
             # right to left
-            if top <= bottom:
-                for j in range(right, left - 1, -1):
-                    answer.append(matrix[bottom][j])
-                bottom -= 1
+            for n in range(right, left - 1, -1):
+                answer.append(matrix[bottom][n])
+            bottom -= 1
 
             # bottom to top
-            for i in range(bottom, top - 1, -1):
-                answer.append(matrix[i][left])
+            for n in range(bottom, top - 1, -1):
+                answer.append(matrix[n][left])
             left += 1
-        # End of Spiral
+        # End of spiral
+        while len(answer) > total_num:
+            answer.pop()
         return answer
 
-
-result = Solution()
-print(result.spiralOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
