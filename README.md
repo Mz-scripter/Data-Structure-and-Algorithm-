@@ -37,11 +37,13 @@ Here are my first solutions, though they don't follow the constraints yet
 ### [Merge Intervals](https://leetcode.com/problems/merge-intervals/description/)
 I tried Leetcode 56 (Merge Intervals), and my solution was accepted with a time complexity of O(NlogN). It ran in 140ms but only beat 5.53% of submissions, which was surprising. The code is pretty straightforward since I'm still learning 😅. Took a look at the top solutions and found some interesting approaches.
 
-## Day 9
+## Day 8.5
 ### [Merge Intervals](https://leetcode.com/problems/merge-intervals/description/)
 I refactored the code I used to solve this problem. The if condition checks whether the merged list is empty or if the end of the last interval in the merged list is less than the start of the current interval. If there’s no overlap, the current interval is appended to the merged list. Otherwise, the intervals are merged by updating the end of the last interval in the merged list to be the maximum of the current interval’s end and the last interval’s end.
 
-
+## Day 9
+### [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/description/)
+I solved LeetCode 54, the spiral matrix problem. My code ran in 32ms, beating 76.71% of submissions. It has a time complexity of `O(m*n)` and uses constant space. I used a combination of `while` and `for` loops—the `while` loop checks if the length of the answer list is still less than the total number of elements in the matrix, while the `for` loops append each number to the answer list. To avoid repetition, I implemented a `wall` mechanism, where after each spiral, the boundaries `(walls)` decrease, preventing duplicate additions. This fixed the issue I had in my first attempt.
 
 
 
