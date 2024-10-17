@@ -12,7 +12,6 @@ class Solution:
         else:
             return closest
 
-
 # Time complexity: 0(n)
 # Space complexity: 0(1)
 nums = [-4, 7, 5, 4, 8]
