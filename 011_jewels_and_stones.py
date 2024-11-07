@@ -10,4 +10,4 @@ class Solution:
 
 result = Solution()
 
-print(result.numJewelsInStones('z', 'ZZ'))
+print(result.numJewelsInStones('aA', 'aAAbbbb'))
