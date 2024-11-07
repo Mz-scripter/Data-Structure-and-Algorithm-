@@ -1,3 +1,6 @@
+import unittest
+
+
 class Solution:
     def numJewelsInStones(self, jewels: str, stones: str) -> int:
         jewels_set = set(jewels)
@@ -8,6 +11,19 @@ class Solution:
         return count
 
 
-result = Solution()
+class TestJewelsAndStones(unittest.TestCase):
+    def setUp(self):
+        self.solution = Solution()
+    
+    def test_basic_case(self):
+        self.assertEqual(self.solution.numJewelsInStones('aA', 'aAAbbbb'), 3)
+    
+    def test_no_jewels(self):
+        self.assertEqual(self.solution.numJewelsInStones('z', 'ZZ'), 0)
+    
+    def test_empty_string(self):
+        self.assertEqual(self.solution.numJewelsInStones('', ''), 0)
 
-print(result.numJewelsInStones('aA', 'aAAbbbb'))
+
+if __name__ == '__main__':
+    unittest.main()
